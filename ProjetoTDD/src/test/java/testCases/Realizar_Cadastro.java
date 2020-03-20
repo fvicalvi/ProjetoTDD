@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -32,7 +33,7 @@ public class Realizar_Cadastro {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", Pagina_Inicial.Cadastro(driver));
-		
+
 		Novo_Cadastro.txt_Username(driver).sendKeys("Usuario");
 		Novo_Cadastro.txt_Email(driver).sendKeys("usuario@teste.com.br");
 		Novo_Cadastro.txt_Password(driver).sendKeys("Ab123456");
@@ -41,12 +42,11 @@ public class Realizar_Cadastro {
 		Novo_Cadastro.txt_Sobrenome(driver).sendKeys("QA");
 		Novo_Cadastro.txt_Telefone(driver).sendKeys("95275460");
 		
-		Select select = new Select(Novo_Cadastro.box_Pais(driver));
-        select.selectByValue("object:152");
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-		
-	
-	
+		Select listbox_Pais = new Select(Novo_Cadastro.box_Pais(driver));
+		listbox_Pais.selectByValue("object:139");
+
 	}
 
 }
