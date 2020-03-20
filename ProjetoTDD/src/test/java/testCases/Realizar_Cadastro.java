@@ -41,11 +41,19 @@ public class Realizar_Cadastro {
 		Novo_Cadastro.txt_Nome(driver).sendKeys("Teste");
 		Novo_Cadastro.txt_Sobrenome(driver).sendKeys("QA");
 		Novo_Cadastro.txt_Telefone(driver).sendKeys("95275460");
-		
+
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 		Select listbox_Pais = new Select(Novo_Cadastro.box_Pais(driver));
 		listbox_Pais.selectByValue("object:139");
+
+		Novo_Cadastro.txt_Estado(driver).sendKeys("SP");
+		Novo_Cadastro.txt_Cidade(driver).sendKeys("São Paulo");
+		Novo_Cadastro.txt_Endereco(driver).sendKeys("Rua teste");
+		Novo_Cadastro.txt_Cep(driver).sendKeys("01203-001");
+		Novo_Cadastro.check_Aceitar(driver).click();
+		Novo_Cadastro.btn_Registrar(driver).click();
+		
 
 	}
 

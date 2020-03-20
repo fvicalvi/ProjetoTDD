@@ -67,4 +67,50 @@ public class Novo_Cadastro {
 
 	}
 
+	public static WebElement txt_Cidade(WebDriver driver) {
+
+		element = driver.findElement(By.name("cityRegisterPage"));
+
+		return element;
+	}
+
+	public static WebElement txt_Endereco(WebDriver driver) {
+
+		element = driver.findElement(By.name("addressRegisterPage"));
+
+		return element;
+
+	}
+
+	public static WebElement txt_Estado(WebDriver driver) {
+
+		element = driver.findElement(By.name("state_/_province_/_regionRegisterPage"));
+
+		return element;
+
+	}
+
+	public static WebElement txt_Cep(WebDriver driver) {
+
+		element = driver.findElement(By.name("postal_codeRegisterPage"));
+
+		return element;
+
+	}
+
+	public static WebElement check_Aceitar(WebDriver driver) {
+
+		element = driver.findElement(By.name("i_agree"));
+
+		return element;
+
+	}
+
+	public static WebElement btn_Registrar(WebDriver driver) {
+
+		element = driver.findElement(By.id("register_btnundefined"));
+
+		return element;
+	}
+
 }
