@@ -2,13 +2,15 @@ package testCases;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import pageObjects.Pagina_Inicial;
+import pageObjects.BuscarLupa;
+import pageObjects.PaginaInicial;
 
-public class Realizar_Busca_Banner {
-	
+public class RealizarBuscaLupa {
+
 	private static WebDriver driver = null;
 
 	public static void main(String[] args) {
@@ -24,10 +26,11 @@ public class Realizar_Busca_Banner {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
-		
-		Pagina_Inicial.Banner(driver).click();
-		Pagina_Inicial.produtoBanner(driver).click();
-		
+
+		PaginaInicial.Buscar(driver).click();
+		BuscarLupa.Lupa(driver).sendKeys("tablets");
+		BuscarLupa.Lupa(driver).sendKeys(Keys.ENTER);
+		BuscarLupa.Produto(driver).click();
 
 	}
 

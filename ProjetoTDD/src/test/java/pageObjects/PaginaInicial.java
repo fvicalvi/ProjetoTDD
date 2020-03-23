@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Pagina_Inicial {
+public class PaginaInicial {
 
 	private static WebElement element = null;
 

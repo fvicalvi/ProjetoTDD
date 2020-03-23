@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Novo_Cadastro {
+public class NovoCadastro {
 
 	private static WebElement element = null;
 

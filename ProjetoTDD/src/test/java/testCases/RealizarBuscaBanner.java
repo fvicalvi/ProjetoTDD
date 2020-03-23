@@ -2,19 +2,16 @@ package testCases;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import pageObjects.Novo_Login;
-import pageObjects.Pagina_Inicial;
+import pageObjects.PaginaInicial;
 
-public class Realizar_Login {
-
+public class RealizarBuscaBanner {
+	
 	private static WebDriver driver = null;
 
-	@Test
-	public void realizarLogin() {
+	public static void main(String[] args) {
 
 		String driverExecutablePath = "C:\\drivers\\chromedriver.exe";
 
@@ -27,19 +24,11 @@ public class Realizar_Login {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
+		
+		PaginaInicial.Banner(driver).click();
+		PaginaInicial.produtoBanner(driver).click();
+		
 
-		Pagina_Inicial.Usuario(driver).click();
-		Novo_Login.txt_Usuario(driver).sendKeys("Usuario");
-		Novo_Login.txt_Senha(driver).sendKeys("Ab123456");
-		Novo_Login.btn_Logar(driver).click();
-		
-		
-		
-		driver.quit();
-	
-	
 	}
-	
-	
-	
+
 }
