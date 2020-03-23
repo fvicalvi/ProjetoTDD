@@ -14,7 +14,7 @@ public class RealizarLogin {
 	private static WebDriver driver = null;
 
 	@Test
-	public void realizarLogin() {
+	public void realizarLoginSucesso() {
 
 		String driverExecutablePath = "C:\\drivers\\chromedriver.exe";
 
@@ -35,11 +35,19 @@ public class RealizarLogin {
 		
 		
 		
-		driver.quit();
+		
 	
 	
 	}
 	
-	
+	@Test
+	public void realizarLoginFalha() {
+		
+		PaginaInicial.Usuario(driver).click();
+		NovoLogin.txt_Usuario(driver).sendKeys("Usuario");
+		NovoLogin.txt_Senha(driver).sendKeys("senhaerrada");
+		NovoLogin.btn_Logar(driver).click();
+		
+	}
 	
 }
