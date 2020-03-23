@@ -1,4 +1,4 @@
-package pageObjects;
+package br.com.rsinet.hub.tdd.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

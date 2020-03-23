@@ -1,20 +1,19 @@
-package testCases;
+package br.com.rsinet.hub.tdd.test;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Test;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import pageObjects.NovoLogin;
-import pageObjects.PaginaInicial;
+import br.com.rsinet.hub.tdd.pageObjects.BuscarLupa;
+import br.com.rsinet.hub.tdd.pageObjects.PaginaInicial;
 
-public class RealizarLogin {
+public class RealizarBuscaLupa {
 
 	private static WebDriver driver = null;
 
-	@Test
-	public void realizarLogin() {
+	public static void main(String[] args) {
 
 		String driverExecutablePath = "C:\\drivers\\chromedriver.exe";
 
@@ -28,18 +27,11 @@ public class RealizarLogin {
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
 
-		PaginaInicial.Usuario(driver).click();
-		NovoLogin.txt_Usuario(driver).sendKeys("Usuario");
-		NovoLogin.txt_Senha(driver).sendKeys("Ab123456");
-		NovoLogin.btn_Logar(driver).click();
-		
-		
-		
-		driver.quit();
-	
-	
+		PaginaInicial.Buscar(driver).click();
+		BuscarLupa.Lupa(driver).sendKeys("tablets");
+		BuscarLupa.Lupa(driver).sendKeys(Keys.ENTER);
+		BuscarLupa.Produto(driver).click();
+
 	}
-	
-	
-	
+
 }
