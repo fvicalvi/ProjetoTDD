@@ -34,25 +34,25 @@ public class Realizar_Cadastro {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", Pagina_Inicial.Cadastro(driver));
 
-		Novo_Cadastro.txt_Username(driver).sendKeys("Usuario");
-		Novo_Cadastro.txt_Email(driver).sendKeys("usuario@teste.com.br");
-		Novo_Cadastro.txt_Password(driver).sendKeys("Ab123456");
-		Novo_Cadastro.txt_ConfirmaPassword(driver).sendKeys("Ab123456");
-		Novo_Cadastro.txt_Nome(driver).sendKeys("Teste");
-		Novo_Cadastro.txt_Sobrenome(driver).sendKeys("QA");
-		Novo_Cadastro.txt_Telefone(driver).sendKeys("95275460");
+		Novo_Cadastro.txtUsername(driver).sendKeys("Usuario");
+		Novo_Cadastro.txtEmail(driver).sendKeys("usuario@teste.com.br");
+		Novo_Cadastro.txtPassword(driver).sendKeys("Ab123456");
+		Novo_Cadastro.txtConfirmaPassword(driver).sendKeys("Ab123456");
+		Novo_Cadastro.txtNome(driver).sendKeys("Teste");
+		Novo_Cadastro.txtSobrenome(driver).sendKeys("QA");
+		Novo_Cadastro.txtTelefone(driver).sendKeys("95275460");
 
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-		Select listbox_Pais = new Select(Novo_Cadastro.box_Pais(driver));
+		Select listbox_Pais = new Select(Novo_Cadastro.boxPais(driver));
 		listbox_Pais.selectByValue("object:139");
 
-		Novo_Cadastro.txt_Estado(driver).sendKeys("SP");
-		Novo_Cadastro.txt_Cidade(driver).sendKeys("São Paulo");
-		Novo_Cadastro.txt_Endereco(driver).sendKeys("Rua teste");
-		Novo_Cadastro.txt_Cep(driver).sendKeys("01203-001");
-		Novo_Cadastro.check_Aceitar(driver).click();
-		Novo_Cadastro.btn_Registrar(driver).click();
+		Novo_Cadastro.txtEstado(driver).sendKeys("SP");
+		Novo_Cadastro.txtCidade(driver).sendKeys("São Paulo");
+		Novo_Cadastro.txtEndereco(driver).sendKeys("Rua teste");
+		Novo_Cadastro.txtCep(driver).sendKeys("01203-001");
+		Novo_Cadastro.checkAceitar(driver).click();
+		Novo_Cadastro.btnRegistrar(driver).click();
 		
 
 	}

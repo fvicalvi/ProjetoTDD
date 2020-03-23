@@ -8,35 +8,35 @@ public class Novo_Cadastro {
 
 	private static WebElement element = null;
 
-	public static WebElement txt_Username(WebDriver driver) {
+	public static WebElement txtUsername(WebDriver driver) {
 
 		element = driver.findElement(By.name("usernameRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement txt_Email(WebDriver driver) {
+	public static WebElement txtEmail(WebDriver driver) {
 
 		element = driver.findElement(By.name("emailRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement txt_Password(WebDriver driver) {
+	public static WebElement txtPassword(WebDriver driver) {
 
 		element = driver.findElement(By.name("passwordRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement txt_ConfirmaPassword(WebDriver driver) {
+	public static WebElement txtConfirmaPassword(WebDriver driver) {
 
 		element = driver.findElement(By.name("confirm_passwordRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement txt_Nome(WebDriver driver) {
+	public static WebElement txtNome(WebDriver driver) {
 
 		element = driver.findElement(By.name("first_nameRegisterPage"));
 
@@ -44,7 +44,7 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement txt_Sobrenome(WebDriver driver) {
+	public static WebElement txtSobrenome(WebDriver driver) {
 
 		element = driver.findElement(By.name("last_nameRegisterPage"));
 
@@ -52,14 +52,14 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement txt_Telefone(WebDriver driver) {
+	public static WebElement txtTelefone(WebDriver driver) {
 
 		element = driver.findElement(By.name("phone_numberRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement box_Pais(WebDriver driver) {
+	public static WebElement boxPais(WebDriver driver) {
 
 		element = driver.findElement(By.name("countryListboxRegisterPage"));
 
@@ -67,14 +67,14 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement txt_Cidade(WebDriver driver) {
+	public static WebElement txtCidade(WebDriver driver) {
 
 		element = driver.findElement(By.name("cityRegisterPage"));
 
 		return element;
 	}
 
-	public static WebElement txt_Endereco(WebDriver driver) {
+	public static WebElement txtEndereco(WebDriver driver) {
 
 		element = driver.findElement(By.name("addressRegisterPage"));
 
@@ -82,7 +82,7 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement txt_Estado(WebDriver driver) {
+	public static WebElement txtEstado(WebDriver driver) {
 
 		element = driver.findElement(By.name("state_/_province_/_regionRegisterPage"));
 
@@ -90,7 +90,7 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement txt_Cep(WebDriver driver) {
+	public static WebElement txtCep(WebDriver driver) {
 
 		element = driver.findElement(By.name("postal_codeRegisterPage"));
 
@@ -98,7 +98,7 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement check_Aceitar(WebDriver driver) {
+	public static WebElement checkAceitar(WebDriver driver) {
 
 		element = driver.findElement(By.name("i_agree"));
 
@@ -106,7 +106,7 @@ public class Novo_Cadastro {
 
 	}
 
-	public static WebElement btn_Registrar(WebDriver driver) {
+	public static WebElement btnRegistrar(WebDriver driver) {
 
 		element = driver.findElement(By.id("register_btnundefined"));
 
