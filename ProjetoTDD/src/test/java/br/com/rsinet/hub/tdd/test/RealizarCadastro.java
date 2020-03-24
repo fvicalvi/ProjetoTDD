@@ -34,7 +34,7 @@ public class RealizarCadastro {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", PaginaInicial.Cadastro(driver));
 
-		NovoCadastro.txtUsername(driver).sendKeys("Usuario");
+		NovoCadastro.txtUsername(driver).sendKeys("Usuario12345");
 		NovoCadastro.txtEmail(driver).sendKeys("usuario@teste.com.br");
 		NovoCadastro.txtPassword(driver).sendKeys("Ab123456");
 		NovoCadastro.txtConfirmaPassword(driver).sendKeys("Ab123456");
@@ -42,7 +42,7 @@ public class RealizarCadastro {
 		NovoCadastro.txtSobrenome(driver).sendKeys("QA");
 		NovoCadastro.txtTelefone(driver).sendKeys("95275460");
 
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		Select listbox_Pais = new Select(NovoCadastro.boxPais(driver));
 		listbox_Pais.selectByValue("object:139");
@@ -53,7 +53,6 @@ public class RealizarCadastro {
 		NovoCadastro.txtCep(driver).sendKeys("01203-001");
 		NovoCadastro.checkAceitar(driver).click();
 		NovoCadastro.btnRegistrar(driver).click();
-		
 
 	}
 
