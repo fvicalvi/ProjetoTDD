@@ -25,7 +25,7 @@ public class RealizarBuscaBanner {
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
 		
-		PaginaInicial.Banner(driver).click();
+		PaginaInicial.clicarBanner(driver).click();
 		PaginaInicial.produtoBanner(driver).click();
 		
 

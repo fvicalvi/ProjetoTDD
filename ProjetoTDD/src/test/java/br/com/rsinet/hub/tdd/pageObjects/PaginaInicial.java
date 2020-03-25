@@ -8,7 +8,7 @@ public class PaginaInicial {
 
 	private static WebElement element = null;
 
-	public static WebElement Usuario(WebDriver driver) {
+	public static WebElement menuUsuario(WebDriver driver) {
 
 		element = driver.findElement(By.id("menuUserLink"));
 
@@ -16,21 +16,21 @@ public class PaginaInicial {
 
 	}
 
-	public static WebElement Cadastro(WebDriver driver) {
+	public static WebElement clicarCadastro(WebDriver driver) {
 
 		element = driver.findElement(By.linkText("CREATE NEW ACCOUNT"));
 
 		return element;
 	}
 
-	public static WebElement Buscar(WebDriver driver) {
+	public static WebElement clicarBuscar(WebDriver driver) {
 
 		element = driver.findElement(By.id("menuSearch"));
 
 		return element;
 	}
 
-	public static WebElement Banner(WebDriver driver) {
+	public static WebElement clicarBanner(WebDriver driver) {
 
 		element = driver.findElement(By.id("headphonesImg"));
 

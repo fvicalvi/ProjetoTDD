@@ -29,10 +29,10 @@ public class RealizarCadastro {
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
 
-		PaginaInicial.Usuario(driver).click();
+		PaginaInicial.menuUsuario(driver).click();
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", PaginaInicial.Cadastro(driver));
+		js.executeScript("arguments[0].click();", PaginaInicial.clicarCadastro(driver));
 
 		NovoCadastro.txtUsername(driver).sendKeys("Usuario12345");
 		NovoCadastro.txtEmail(driver).sendKeys("usuario@teste.com.br");

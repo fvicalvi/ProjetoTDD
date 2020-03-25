@@ -8,7 +8,7 @@ public class NovoLogin {
 
 	private static WebElement element = null;
 
-	public static WebElement txt_Usuario(WebDriver driver) {
+	public static WebElement txtUsuario(WebDriver driver) {
 
 		element = driver.findElement(By.name("username"));
 
@@ -16,7 +16,7 @@ public class NovoLogin {
 
 	}
 
-	public static WebElement txt_Senha(WebDriver driver) {
+	public static WebElement txtSenha(WebDriver driver) {
 
 		element = driver.findElement(By.name("password"));
 
@@ -24,7 +24,7 @@ public class NovoLogin {
 
 	}
 
-	public static WebElement btn_Logar(WebDriver driver) {
+	public static WebElement btnLogar(WebDriver driver) {
 
 		element = driver.findElement(By.id("sign_in_btnundefined"));
 
@@ -32,4 +32,7 @@ public class NovoLogin {
 
 	}
 
+
 }
+
+

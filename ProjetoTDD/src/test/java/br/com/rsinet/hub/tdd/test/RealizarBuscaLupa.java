@@ -27,7 +27,7 @@ public class RealizarBuscaLupa {
 
 		driver.get("https://www.advantageonlineshopping.com/#/");
 
-		PaginaInicial.Buscar(driver).click();
+		PaginaInicial.clicarBuscar(driver).click();
 		BuscarLupa.Lupa(driver).sendKeys("tablets");
 		BuscarLupa.Lupa(driver).sendKeys(Keys.ENTER);
 		BuscarLupa.Produto(driver).click();
