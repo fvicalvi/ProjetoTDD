@@ -1,47 +1,48 @@
 package br.com.rsinet.hub.tdd.pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class PaginaInicial {
+	
+	final WebDriver driver;
+	
+	
+	@FindBy(how = How.ID, using = "menuUserLink")
+	
+	public WebElement menuUsuario;
 
-	private static WebElement element = null;
-
-	public static WebElement menuUsuario(WebDriver driver) {
-
-		element = driver.findElement(By.id("menuUserLink"));
-
-		return element;
-
-	}
-
-	public static WebElement clicarCadastro(WebDriver driver) {
-
-		element = driver.findElement(By.linkText("CREATE NEW ACCOUNT"));
-
-		return element;
-	}
-
-	public static WebElement clicarBuscar(WebDriver driver) {
-
-		element = driver.findElement(By.id("menuSearch"));
-
-		return element;
-	}
-
-	public static WebElement clicarBanner(WebDriver driver) {
-
-		element = driver.findElement(By.id("headphonesImg"));
-
-		return element;
-	}
-
-	public static WebElement produtoBanner(WebDriver driver) {
-
-		element = driver.findElement(By.id("15"));
-
-		return element;
-	}
+	@FindBy(how = How.LINK_TEXT, using = "CREATE NEW ACCOUNT")
+	
+	public WebElement clicarCadastro;
+	
+	@FindBy(how = How.ID, using = "menuSearch")
+	
+	public WebElement clicarBuscar;
+	
+	@FindBy(how = How.ID, using = "headphonesImg")
+	
+	public WebElement clicarBanner;
+	
+	@FindBy(how = How.ID, using = "15")
+	
+	public WebElement produtoBanner;
+	
+	
+	public PaginaInicial(WebDriver driver) {
+	 
+	 this.driver = driver;
 
 }
+	
+	
+}
+
+
+
+
+
+
+

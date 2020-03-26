@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,50 +19,51 @@ import br.com.rsinet.hub.tdd.utils.InicializaDriver;
 
 public class RealizarLogin {
 
-	private WebDriver driver;
+	static WebDriver driver;
+
+	PaginaInicial Inicial;
+	NovoLogin Login;
 
 	@BeforeMethod
 	public void Inicializar() {
+
+		// inicializa o driver e abre o navegador
 		driver = InicializaDriver.criarDriver();
 
-		}
+		// Inicializa as paginas inicial e login
+		Inicial = PageFactory.initElements(driver, PaginaInicial.class);
+		Login = PageFactory.initElements(driver, NovoLogin.class);
+
+	}
 
 	@Test
 	public void realizarLoginSucesso() {
 
-		PaginaInicial.menuUsuario(driver).click();
-		NovoLogin.txtUsuario(driver).sendKeys("Usuario012");
-		NovoLogin.txtSenha(driver).sendKeys("Ab123456");
-		NovoLogin.btnLogar(driver).click();
-		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+		Inicial.menuUsuario.click();
+		Login.fazerLogin("Usuario2020", "Ab123456");
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		WebElement hiUser = driver.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
 		String textoNome = hiUser.getText();
-		assertEquals(textoNome, "Usuario012");
-		
-		
-		}
+		assertEquals(textoNome, "Usuario2020");
 
-	
+	}
+
 	@Test
 	public void realizarLoginFalha() {
-		
-		PaginaInicial.menuUsuario(driver).click();
-		NovoLogin.txtUsuario(driver).sendKeys("Usuario012");
-		NovoLogin.txtSenha(driver).sendKeys("senhaerrada");
-		NovoLogin.btnLogar(driver).click();
-		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+
+		Inicial.menuUsuario.click();
+		Login.fazerLogin("Usuario2020", "senhaerrada");
+
+		WebDriverWait aguardar = new WebDriverWait(driver, 10);
 		WebElement validar = driver.findElement(By.id("signInResultMessage"));
+		aguardar.until(ExpectedConditions.textToBePresentInElement(validar, "Incorrect user name or password."));
+
 		String validacao = validar.getText();
-		assertEquals(validacao, "OR");
-		
+		assertEquals(validacao, "Incorrect user name or password.");
+
 	}
-	
-	
 
 	@AfterMethod
 	public void Fechar() {
