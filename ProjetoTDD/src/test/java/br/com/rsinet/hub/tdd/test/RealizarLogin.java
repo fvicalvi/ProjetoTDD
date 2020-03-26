@@ -12,18 +12,29 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import br.com.rsinet.hub.tdd.pageObjects.NovoLogin;
 import br.com.rsinet.hub.tdd.pageObjects.PaginaInicial;
+import br.com.rsinet.hub.tdd.utils.ConfiguraReport;
 import br.com.rsinet.hub.tdd.utils.InicializaDriver;
 
 public class RealizarLogin {
 
 	static WebDriver driver;
+	
 
 	PaginaInicial Inicial;
 	NovoLogin Login;
 
+	@BeforeTest
+	public void iniciaReport () {
+		
+	ConfiguraReport.criaReport();
+	
+	}
+	
+	
 	@BeforeMethod
 	public void Inicializar() {
 
@@ -66,8 +77,13 @@ public class RealizarLogin {
 	}
 
 	@AfterMethod
-	public void Fechar() {
+	public void finalizaTest() {
+		ConfiguraReport.reportStatus();
+		
 		driver.quit();
 	}
-
+	
+		
+	
+	
 }

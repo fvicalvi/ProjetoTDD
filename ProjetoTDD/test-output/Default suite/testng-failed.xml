@@ -5,7 +5,8 @@
     <classes>
       <class name="br.com.rsinet.hub.tdd.test.RealizarLogin">
         <methods>
-          <include name="Fechar"/>
+          <include name="iniciaReport"/>
+          <include name="finalizaTest"/>
           <include name="realizarLoginSucesso"/>
           <include name="Inicializar"/>
         </methods>
