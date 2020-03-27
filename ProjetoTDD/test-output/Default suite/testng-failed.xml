@@ -8,6 +8,7 @@
           <include name="iniciaReport"/>
           <include name="finalizaTest"/>
           <include name="realizarLoginSucesso"/>
+          <include name="finalizaExtent"/>
           <include name="Inicializar"/>
         </methods>
       </class> <!-- br.com.rsinet.hub.tdd.test.RealizarLogin -->

@@ -1,122 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14678" started-at="2020-03-26T15:20:52 BRT" finished-at="2020-03-26T15:21:06 BRT">
+  <suite name="Default suite" duration-ms="28450" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:08:09 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14678" started-at="2020-03-26T15:20:52 BRT" finished-at="2020-03-26T15:21:06 BRT">
+    <test name="Default test" duration-ms="28450" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:08:09 BRT">
       <class name="br.com.rsinet.hub.tdd.test.RealizarLogin">
-        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="iniciaReport" is-config="true" duration-ms="84" started-at="2020-03-26T15:20:52 BRT" finished-at="2020-03-26T15:20:52 BRT">
+        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="iniciaReport" is-config="true" duration-ms="77" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:07:41 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaReport -->
-        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="Inicializar" is-config="true" duration-ms="12354" started-at="2020-03-26T15:20:52 BRT" finished-at="2020-03-26T15:21:04 BRT">
+        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="Inicializar" is-config="true" duration-ms="11574" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:07:53 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Inicializar -->
-        <test-method status="PASS" signature="realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="realizarLoginFalha" duration-ms="2192" started-at="2020-03-26T15:21:04 BRT" finished-at="2020-03-26T15:21:06 BRT">
+        <test-method status="PASS" signature="realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="realizarLoginFalha" duration-ms="2164" started-at="2020-03-27T10:07:53 BRT" finished-at="2020-03-27T10:07:55 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarLoginFalha -->
-        <test-method status="FAIL" signature="finalizaTest()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="finalizaTest" is-config="true" duration-ms="4" started-at="2020-03-26T15:21:06 BRT" finished-at="2020-03-26T15:21:06 BRT">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at br.com.rsinet.hub.tdd.utils.ConfiguraReport.reportStatus(ConfiguraReport.java:37)
-at br.com.rsinet.hub.tdd.test.RealizarLogin.finalizaTest(RealizarLogin.java:81)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaTest" is-config="true" duration-ms="634" started-at="2020-03-27T10:07:55 BRT" finished-at="2020-03-27T10:07:55 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=realizarLoginFalha status=SUCCESS method=RealizarLogin.realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTest -->
-        <test-method status="SKIP" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="Inicializar" is-config="true" duration-ms="-1585246866949" started-at="2020-03-26T15:21:06 BRT" finished-at="1969-12-31T21:00:00 BRT">
+        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="Inicializar" is-config="true" duration-ms="10947" started-at="2020-03-27T10:07:55 BRT" finished-at="2020-03-27T10:08:06 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Inicializar -->
-        <test-method status="SKIP" signature="realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="realizarLoginSucesso" duration-ms="0" started-at="2020-03-26T15:21:06 BRT" finished-at="2020-03-26T15:21:06 BRT">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at br.com.rsinet.hub.tdd.utils.ConfiguraReport.reportStatus(ConfiguraReport.java:37)
-at br.com.rsinet.hub.tdd.test.RealizarLogin.finalizaTest(RealizarLogin.java:81)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="realizarLoginSucesso" duration-ms="1956" started-at="2020-03-27T10:08:06 BRT" finished-at="2020-03-27T10:08:08 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarLoginSucesso -->
-        <test-method status="SKIP" signature="finalizaTest()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@71bbf57e]" name="finalizaTest" is-config="true" duration-ms="-1585246866956" started-at="2020-03-26T15:21:06 BRT" finished-at="1969-12-31T21:00:00 BRT">
+        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaTest" is-config="true" duration-ms="863" started-at="2020-03-27T10:08:08 BRT" finished-at="2020-03-27T10:08:09 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=realizarLoginSucesso status=SUCCESS method=RealizarLogin.realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTest -->
+        <test-method status="PASS" signature="finalizaExtent()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaExtent" is-config="true" duration-ms="206" started-at="2020-03-27T10:08:09 BRT" finished-at="2020-03-27T10:08:09 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaExtent -->
       </class> <!-- br.com.rsinet.hub.tdd.test.RealizarLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
