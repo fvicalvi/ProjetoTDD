@@ -2,54 +2,54 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28450" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:08:09 BRT">
+  <suite name="Default suite" duration-ms="29309" started-at="2020-03-27T15:50:19 BRT" finished-at="2020-03-27T15:50:49 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28450" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:08:09 BRT">
+    <test name="Default test" duration-ms="29309" started-at="2020-03-27T15:50:19 BRT" finished-at="2020-03-27T15:50:49 BRT">
       <class name="br.com.rsinet.hub.tdd.test.RealizarLogin">
-        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="iniciaReport" is-config="true" duration-ms="77" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:07:41 BRT">
+        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="iniciaReport" is-config="true" duration-ms="76" started-at="2020-03-27T15:50:19 BRT" finished-at="2020-03-27T15:50:19 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaReport -->
-        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="Inicializar" is-config="true" duration-ms="11574" started-at="2020-03-27T10:07:41 BRT" finished-at="2020-03-27T10:07:53 BRT">
+        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="Inicializar" is-config="true" duration-ms="11350" started-at="2020-03-27T15:50:19 BRT" finished-at="2020-03-27T15:50:31 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Inicializar -->
-        <test-method status="PASS" signature="realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="realizarLoginFalha" duration-ms="2164" started-at="2020-03-27T10:07:53 BRT" finished-at="2020-03-27T10:07:55 BRT">
+        <test-method status="PASS" signature="realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="realizarLoginFalha" duration-ms="2174" started-at="2020-03-27T15:50:31 BRT" finished-at="2020-03-27T15:50:33 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarLoginFalha -->
-        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaTest" is-config="true" duration-ms="634" started-at="2020-03-27T10:07:55 BRT" finished-at="2020-03-27T10:07:55 BRT">
+        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="finalizaTest" is-config="true" duration-ms="1276" started-at="2020-03-27T15:50:33 BRT" finished-at="2020-03-27T15:50:34 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=realizarLoginFalha status=SUCCESS method=RealizarLogin.realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21] output={null}]]]>
+                <![CDATA[[TestResult name=realizarLoginFalha status=SUCCESS method=RealizarLogin.realizarLoginFalha()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTest -->
-        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="Inicializar" is-config="true" duration-ms="10947" started-at="2020-03-27T10:07:55 BRT" finished-at="2020-03-27T10:08:06 BRT">
+        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="Inicializar" is-config="true" duration-ms="10898" started-at="2020-03-27T15:50:34 BRT" finished-at="2020-03-27T15:50:45 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Inicializar -->
-        <test-method status="PASS" signature="realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="realizarLoginSucesso" duration-ms="1956" started-at="2020-03-27T10:08:06 BRT" finished-at="2020-03-27T10:08:08 BRT">
+        <test-method status="PASS" signature="realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="realizarLoginSucesso" duration-ms="2074" started-at="2020-03-27T15:50:45 BRT" finished-at="2020-03-27T15:50:47 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarLoginSucesso -->
-        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaTest" is-config="true" duration-ms="863" started-at="2020-03-27T10:08:08 BRT" finished-at="2020-03-27T10:08:09 BRT">
+        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="finalizaTest" is-config="true" duration-ms="1218" started-at="2020-03-27T15:50:47 BRT" finished-at="2020-03-27T15:50:48 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=realizarLoginSucesso status=SUCCESS method=RealizarLogin.realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21] output={null}]]]>
+                <![CDATA[[TestResult name=realizarLoginSucesso status=SUCCESS method=RealizarLogin.realizarLoginSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTest -->
-        <test-method status="PASS" signature="finalizaExtent()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@d44fc21]" name="finalizaExtent" is-config="true" duration-ms="206" started-at="2020-03-27T10:08:09 BRT" finished-at="2020-03-27T10:08:09 BRT">
+        <test-method status="PASS" signature="finalizaExtent()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarLogin@5cdd8682]" name="finalizaExtent" is-config="true" duration-ms="217" started-at="2020-03-27T15:50:48 BRT" finished-at="2020-03-27T15:50:49 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtent -->

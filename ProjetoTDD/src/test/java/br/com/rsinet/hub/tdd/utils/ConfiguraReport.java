@@ -21,7 +21,7 @@ public class ConfiguraReport {
 	
 	public static void criaReport(String nomeReport) {
 		
-			htmlReporter = new ExtentHtmlReporter("src/test/resources/" + nomeReport + ".html");
+			htmlReporter = new ExtentHtmlReporter("src/test/resources/Reports/" + nomeReport + ".html");
 			htmlReporter.config().setDocumentTitle("Report");
 			htmlReporter.config().setReportName("Report");
 			reports = new ExtentReports();

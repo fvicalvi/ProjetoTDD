@@ -23,6 +23,7 @@ import com.aventstack.extentreports.ExtentTest;
 import br.com.rsinet.hub.tdd.pageObjects.NovoLogin;
 import br.com.rsinet.hub.tdd.pageObjects.PaginaInicial;
 import br.com.rsinet.hub.tdd.utils.ConfiguraReport;
+import br.com.rsinet.hub.tdd.utils.ConfiguraScreenShot;
 import br.com.rsinet.hub.tdd.utils.InicializaDriver;
 
 public class RealizarLogin {
@@ -34,6 +35,8 @@ public class RealizarLogin {
 
 	PaginaInicial Inicial;
 	NovoLogin Login;
+	private String nomeDoPrint;
+	
 
 
 	
@@ -62,7 +65,8 @@ public class RealizarLogin {
 	public void realizarLoginSucesso() {
 		
 		nomeTeste =  "login sucesso";
-
+		nomeDoPrint = "login sucesso";
+		
 		Inicial.menuUsuario.click();
 		Login.fazerLogin("Usuario3030", "Ab123456");
 
@@ -77,7 +81,8 @@ public class RealizarLogin {
 	@Test
 	public void realizarLoginFalha() {
 		
-		nomeTeste = "login falha";
+		nomeTeste = "login falhou";
+		nomeDoPrint = "login falhou";
 		
 		Inicial.menuUsuario.click();
 		Login.fazerLogin("Usuario3030", "senhaerrada");
@@ -96,6 +101,8 @@ public class RealizarLogin {
 		
 			test = ConfiguraReport.criaTest(nomeTeste);
 			ConfiguraReport.reportStatus(test, result, driver);
+			ConfiguraScreenShot.tiraPrint(driver, nomeDoPrint);
+			
 			driver.quit();
 	}
 		
