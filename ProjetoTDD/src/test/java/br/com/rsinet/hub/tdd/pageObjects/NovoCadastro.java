@@ -66,6 +66,14 @@ public class NovoCadastro {
 	public WebElement btnRegistrar;
 	
 	
+	
+	
+		
+		
+		
+		
+	
+	
 public NovoCadastro(WebDriver driver) {
 		
 		this.driver = driver;
