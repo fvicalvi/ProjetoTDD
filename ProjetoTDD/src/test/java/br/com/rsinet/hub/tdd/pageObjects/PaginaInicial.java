@@ -1,5 +1,6 @@
 package br.com.rsinet.hub.tdd.pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.How;
 public class PaginaInicial {
 	
 	final WebDriver driver;
+	private JavascriptExecutor js;
 	
 	
 	@FindBy(how = How.ID, using = "menuUserLink")
@@ -29,6 +31,9 @@ public class PaginaInicial {
 	@FindBy(how = How.ID, using = "15")
 	
 	public WebElement produtoBanner;
+
+
+	
 	
 	
 	public void clicarMenuUsuario() {
@@ -38,7 +43,8 @@ public class PaginaInicial {
 	
 	public void criarNovoCadastro() {
 		
-		clicarCadastro.click();
+		js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", clicarCadastro);
 	}
 	
 	

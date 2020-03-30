@@ -2,61 +2,24 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24292" started-at="2020-03-30T11:39:24 BRT" finished-at="2020-03-30T11:39:48 BRT">
+  <suite name="Default suite" duration-ms="15636" started-at="2020-03-30T16:09:13 BRT" finished-at="2020-03-30T16:09:29 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24292" started-at="2020-03-30T11:39:24 BRT" finished-at="2020-03-30T11:39:48 BRT">
+    <test name="Default test" duration-ms="15636" started-at="2020-03-30T16:09:13 BRT" finished-at="2020-03-30T16:09:29 BRT">
       <class name="br.com.rsinet.hub.tdd.test.RealizarCadastro">
-        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="iniciaReport" is-config="true" duration-ms="71" started-at="2020-03-30T11:39:24 BRT" finished-at="2020-03-30T11:39:24 BRT">
+        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="iniciaReport" is-config="true" duration-ms="73" started-at="2020-03-30T16:09:13 BRT" finished-at="2020-03-30T16:09:13 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaReport -->
-        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="Inicializar" is-config="true" duration-ms="11955" started-at="2020-03-30T11:39:24 BRT" finished-at="2020-03-30T11:39:36 BRT">
+        <test-method status="PASS" signature="Inicializar()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="Inicializar" is-config="true" duration-ms="12602" started-at="2020-03-30T16:09:13 BRT" finished-at="2020-03-30T16:09:26 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Inicializar -->
-        <test-method status="FAIL" signature="cadastroComSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="cadastroComSucesso" duration-ms="10702" started-at="2020-03-30T11:39:36 BRT" finished-at="2020-03-30T11:39:46 BRT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='usernameRegisterPage']"}
-  (Session info: chrome=80.0.3987.149)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'SKAR1201135', ip: '192.168.15.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\FELIPE~1.OLI\AppData\Local\Temp\scoped_dir11752_134579413}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50933}, acceptInsecureCerts=false, browserVersion=80.0.3987.149, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true}]
-Session ID: 77ffcf337470e76ed538ef414b763543
-*** Element info: {Using=name, value=usernameRegisterPage}]]>
-            </message>
+        <test-method status="FAIL" signature="cadastroComSucesso()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="cadastroComSucesso" duration-ms="2199" started-at="2020-03-30T16:09:26 BRT" finished-at="2020-03-30T16:09:28 BRT">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='usernameRegisterPage']"}
-  (Session info: chrome=80.0.3987.149)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'SKAR1201135', ip: '192.168.15.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\FELIPE~1.OLI\AppData\Local\Temp\scoped_dir11752_134579413}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50933}, acceptInsecureCerts=false, browserVersion=80.0.3987.149, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true}]
-Session ID: 77ffcf337470e76ed538ef414b763543
-*** Element info: {Using=name, value=usernameRegisterPage}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
-at org.openqa.selenium.By$ByName.findElement(By.java:303)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-at br.com.rsinet.hub.tdd.pageObjects.NovoCadastro.inserirUsuario(NovoCadastro.java:72)
-at br.com.rsinet.hub.tdd.test.RealizarCadastro.cadastroComSucesso(RealizarCadastro.java:66)
+              <![CDATA[java.lang.NullPointerException
+at br.com.rsinet.hub.tdd.test.RealizarCadastro.cadastroComSucesso(RealizarCadastro.java:92)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -87,11 +50,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cadastroComSucesso -->
-        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="finalizaTest" is-config="true" duration-ms="1312" started-at="2020-03-30T11:39:46 BRT" finished-at="2020-03-30T11:39:48 BRT">
+        <test-method status="PASS" signature="finalizaTest(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="finalizaTest" is-config="true" duration-ms="373" started-at="2020-03-30T16:09:28 BRT" finished-at="2020-03-30T16:09:28 BRT">
           <params>
             <param index="0">
               <value>
@@ -102,7 +65,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaTest -->
-        <test-method status="PASS" signature="finalizaExtent()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="finalizaExtent" is-config="true" duration-ms="221" started-at="2020-03-30T11:39:48 BRT" finished-at="2020-03-30T11:39:48 BRT">
+        <test-method status="PASS" signature="finalizaExtent()[pri:0, instance:br.com.rsinet.hub.tdd.test.RealizarCadastro@5cdd8682]" name="finalizaExtent" is-config="true" duration-ms="365" started-at="2020-03-30T16:09:28 BRT" finished-at="2020-03-30T16:09:29 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtent -->

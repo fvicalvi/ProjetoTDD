@@ -102,7 +102,7 @@ public class NovoCadastro {
 		txtTelefone.sendKeys(telefone);
 	}
 	
-	public void inserirPais(String pais) throws Exception {
+	public void inserirPais(String pais) throws Exception, InterruptedException {
 		
 		Select select = new Select(boxPais);
 	     select.selectByVisibleText(pais);
