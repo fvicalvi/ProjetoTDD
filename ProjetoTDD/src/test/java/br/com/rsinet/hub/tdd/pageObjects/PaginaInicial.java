@@ -24,17 +24,6 @@ public class PaginaInicial {
 	
 	public WebElement clicarBuscar;
 	
-	@FindBy(how = How.ID, using = "headphonesImg")
-	
-	public WebElement clicarBanner;
-	
-	@FindBy(how = How.ID, using = "15")
-	
-	public WebElement produtoBanner;
-
-
-	
-	
 	
 	public void clicarMenuUsuario() {
 		
@@ -47,6 +36,12 @@ public class PaginaInicial {
 		js.executeScript("arguments[0].click();", clicarCadastro);
 	}
 	
+	
+	public void buscarLupa() {
+		
+		clicarBuscar.click();
+		
+	}
 	
 	
 	
