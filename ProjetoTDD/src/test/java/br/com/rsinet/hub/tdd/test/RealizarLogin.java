@@ -33,8 +33,8 @@ public class RealizarLogin {
 	private String nomeTeste;
 	
 
-	PaginaInicial Inicial;
-	NovoLogin Login;
+	PaginaInicial inicial;
+	NovoLogin login;
 	private String nomeDoPrint;
 	
 
@@ -56,8 +56,8 @@ public class RealizarLogin {
 		driver = InicializaDriver.criarDriver();
 
 		// Inicializa as paginas inicial e login
-		Inicial = PageFactory.initElements(driver, PaginaInicial.class);
-		Login = PageFactory.initElements(driver, NovoLogin.class);
+		inicial = PageFactory.initElements(driver, PaginaInicial.class);
+		login = PageFactory.initElements(driver, NovoLogin.class);
 
 	}
 
@@ -67,8 +67,8 @@ public class RealizarLogin {
 		nomeTeste =  "login sucesso";
 		nomeDoPrint = "login sucesso";
 		
-		Inicial.menuUsuario.click();
-		Login.fazerLogin("Usuario3030", "Ab123456");
+		inicial.clicarMenuUsuario();
+		login.fazerLogin("Usuario3030", "Ab123456");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -84,8 +84,8 @@ public class RealizarLogin {
 		nomeTeste = "login falhou";
 		nomeDoPrint = "login falhou";
 		
-		Inicial.menuUsuario.click();
-		Login.fazerLogin("Usuario3030", "senhaerrada");
+		inicial.menuUsuario.click();
+		login.fazerLogin("Usuario3030", "senhaerrada");
 
 		WebDriverWait aguardar = new WebDriverWait(driver, 10);
 		WebElement validar = driver.findElement(By.id("signInResultMessage"));

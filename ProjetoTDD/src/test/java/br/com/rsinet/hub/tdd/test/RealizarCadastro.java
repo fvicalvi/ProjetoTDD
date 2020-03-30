@@ -1,59 +1,99 @@
 package br.com.rsinet.hub.tdd.test;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.JavascriptExecutor;
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.hub.tdd.pageObjects.NovoCadastro;
 import br.com.rsinet.hub.tdd.pageObjects.PaginaInicial;
+import br.com.rsinet.hub.tdd.utils.ConfiguraReport;
+import br.com.rsinet.hub.tdd.utils.ConfiguraScreenShot;
+import br.com.rsinet.hub.tdd.utils.ExcelMassaDeDados;
+import br.com.rsinet.hub.tdd.utils.ExcelUtils;
+import br.com.rsinet.hub.tdd.utils.InicializaDriver;
 
 public class RealizarCadastro {
 
-//	private static WebDriver driver = null;
-//
-//	public static void main(String[] args) {
-//
-//		String driverExecutablePath = "C:\\drivers\\chromedriver.exe";
-//
-//		System.setProperty("webdriver.chrome.driver", driverExecutablePath);
-//
-//		driver = new ChromeDriver();
-//
-//		driver.manage().window().maximize();
-//
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//
-//		driver.get("https://www.advantageonlineshopping.com/#/");
-//
-//		PaginaInicial.menuUsuario(driver).click();
-//
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].click();", PaginaInicial.clicarCadastro(driver));
-//
-//		NovoCadastro.txtUsername(driver).sendKeys("Usuario12345");
-//		NovoCadastro.txtEmail(driver).sendKeys("usuario@teste.com.br");
-//		NovoCadastro.txtPassword(driver).sendKeys("Ab123456");
-//		NovoCadastro.txtConfirmaPassword(driver).sendKeys("Ab123456");
-//		NovoCadastro.txtNome(driver).sendKeys("Teste");
-//		NovoCadastro.txtSobrenome(driver).sendKeys("QA");
-//		NovoCadastro.txtTelefone(driver).sendKeys("95275460");
-//
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//
-//		Select listbox_Pais = new Select(NovoCadastro.boxPais(driver));
-//		listbox_Pais.selectByValue("object:139");
-//
-//		NovoCadastro.txtEstado(driver).sendKeys("SP");
-//		NovoCadastro.txtCidade(driver).sendKeys("São Paulo");
-//		NovoCadastro.txtEndereco(driver).sendKeys("Rua teste");
-//		NovoCadastro.txtCep(driver).sendKeys("01203-001");
-//		NovoCadastro.checkAceitar(driver).click();
-//		NovoCadastro.btnRegistrar(driver).click();
-//
-//	}
+	static WebDriver driver;
+	private ExtentTest test;
+	private String nomeTeste;
+	private String nomeDoPrint;
+
+	PaginaInicial inicial;
+	NovoCadastro cadastro;
+	ExcelMassaDeDados excel;
+
+	@BeforeTest
+	public void iniciaReport() {
+
+		ConfiguraReport.criaReport("fazer cadastro");
+
+	}
+
+	@BeforeMethod
+	public void Inicializar() throws Exception {
+
+		// inicializa o driver e abre o navegador
+		driver = InicializaDriver.criarDriver();
+
+		// Inicializa as paginas inicial e cadastro
+		inicial = PageFactory.initElements(driver, PaginaInicial.class);
+		cadastro = PageFactory.initElements(driver, NovoCadastro.class);
+
+		ExcelUtils.setarArquivoExcel("C:\\Users\\felipe.oliveira\\eclipse-workspace\\ProjetoTDD\\src\\test\\resources\\massa\\teste.xlsx", "Planilha1");
+		excel = new ExcelMassaDeDados();
+
+	}
+
+	@Test
+	public void cadastroComSucesso() throws Exception {
+
+		nomeTeste = "cadastro com sucesso";
+		nomeDoPrint = "cadastro com sucesso";
+
+		inicial.clicarMenuUsuario();
+		inicial.criarNovoCadastro();
+
+		cadastro.inserirUsuario(excel.getUserName());
+		cadastro.inserirEmail(excel.getEmail());
+		cadastro.inserirSenha(excel.getSenha());
+		cadastro.inserirConfirmaSenha(excel.getConfirmarSenha());
+		cadastro.inserirNome(excel.getNome());
+		cadastro.inserirSobrenome(excel.getSobrenome());
+		cadastro.inserirTelefone(excel.getTelefone());
+		cadastro.inserirPais(excel.getPais());
+		cadastro.inserirCidade(excel.getCidade());
+		cadastro.inserirEndereco(excel.getEndereco());
+		cadastro.inserirEstado(excel.getEstado());
+		cadastro.inserirCep(excel.getCEP());
+		cadastro.clicarAceitar();
+		cadastro.clicarRegistrar();
+
+	}
+
+	@AfterMethod
+	public void finalizaTest(ITestResult result) throws IOException {
+
+		test = ConfiguraReport.criaTest(nomeTeste);
+		ConfiguraReport.reportStatus(test, result, driver);
+		ConfiguraScreenShot.tiraPrint(driver, nomeDoPrint);
+
+		driver.quit();
+	}
+
+	@AfterTest
+	public void finalizaExtent() {
+		ConfiguraReport.fechaExtent();
+
+	}
 
 }

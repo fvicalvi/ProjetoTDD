@@ -31,6 +31,19 @@ public class PaginaInicial {
 	public WebElement produtoBanner;
 	
 	
+	public void clicarMenuUsuario() {
+		
+		menuUsuario.click();
+	}
+	
+	public void criarNovoCadastro() {
+		
+		clicarCadastro.click();
+	}
+	
+	
+	
+	
 	public PaginaInicial(WebDriver driver) {
 	 
 	 this.driver = driver;
