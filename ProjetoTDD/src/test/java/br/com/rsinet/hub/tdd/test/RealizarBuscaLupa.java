@@ -1,11 +1,16 @@
 package br.com.rsinet.hub.tdd.test;
 
-import java.util.concurrent.TimeUnit;
+import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.Keys;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,8 +19,8 @@ import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.hub.tdd.pageObjects.Produtos;
 import br.com.rsinet.hub.tdd.utils.ConfiguraReport;
+import br.com.rsinet.hub.tdd.utils.ConfiguraScreenShot;
 import br.com.rsinet.hub.tdd.utils.InicializaDriver;
-import br.com.rsinet.hub.tdd.pageObjects.NovoLogin;
 import br.com.rsinet.hub.tdd.pageObjects.PaginaInicial;
 
 public class RealizarBuscaLupa {
@@ -57,15 +62,49 @@ public class RealizarBuscaLupa {
 		nomeTeste =  "buscar lupa sucesso";
 		nomeDoPrint = "buscar lupa sucesso";
 		
-		inicial.buscarLupa();
-		produtos.SelecionarProdutoDoCampo();
+		inicial.clicarLupa();
+		produtos.buscarProdutoLupa("tablets");
+		produtos.produtoEscolhido();
+		
+		WebElement txtProduto = driver.findElement(By.xpath("//h1[@class='roboto-regular screen768 ng-binding']"));
+		String produtoNome = txtProduto.getText();
+		assertEquals(produtoNome, "HP ELITEPAD 1000 G2 TABLET");
+	}
+
+	
+	@Test
+	public void pesquisarInexistenteLupa() {
+		
+		nomeTeste = "buscar inexistente";
+		nomeDoPrint = "buscar inexistente";
+		
+		inicial.clicarLupa();
+		produtos.buscarProdutoLupa("playstation");
+		
+		WebElement txtProduto = driver.findElement(By.xpath("//div[@class='textAlignCenter ng-scope']"));
+		String produtoNome = txtProduto.getText();
+		assertEquals(produtoNome, "No results for \"playstation\"");
+		
 		
 	}
-//		PaginaInicial.clicarBuscar(driver).click();
-//		BuscarLupa.Lupa(driver).sendKeys("tablets");
-//		BuscarLupa.Lupa(driver).sendKeys(Keys.ENTER);
-//		BuscarLupa.Produto(driver).click();
-//
-//	}
-
+	
+	
+	@AfterMethod
+	public void finalizaTest(ITestResult result ) throws IOException {
+		
+			test = ConfiguraReport.criaTest(nomeTeste);
+			ConfiguraReport.reportStatus(test, result, driver);
+			ConfiguraScreenShot.tiraPrint(driver, nomeDoPrint);
+			
+			driver.quit();
+	}
+		
+	
+		
+	@AfterTest
+	public void finalizaExtent () {
+		ConfiguraReport.fechaExtent();
+		
+	}
+	
 }

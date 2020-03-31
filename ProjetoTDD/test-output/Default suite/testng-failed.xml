@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub.tdd.test.RealizarBuscaLupa">
+      <class name="br.com.rsinet.hub.tdd.test.RealizarBuscaBanner">
         <methods>
           <include name="Inicializar"/>
-          <include name="pesquisarLupa"/>
           <include name="iniciaReport"/>
+          <include name="clicarBannerInexistente"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub.tdd.test.RealizarBuscaLupa -->
+      </class> <!-- br.com.rsinet.hub.tdd.test.RealizarBuscaBanner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -84,7 +84,7 @@ public class RealizarLogin {
 		nomeTeste = "login falhou";
 		nomeDoPrint = "login falhou";
 		
-		inicial.menuUsuario.click();
+		inicial.clicarMenuUsuario();
 		login.fazerLogin("Usuario3030", "senhaerrada");
 
 		WebDriverWait aguardar = new WebDriverWait(driver, 10);
