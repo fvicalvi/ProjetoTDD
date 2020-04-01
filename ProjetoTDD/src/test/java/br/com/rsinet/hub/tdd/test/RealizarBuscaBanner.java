@@ -64,7 +64,10 @@ public class RealizarBuscaBanner {
 	
 	@Test
 	public void clicarBannerInexistente() {
-	inicial.clicarProdutoInexistente();
+		
+		
+		
+		
 	}
 	
 }

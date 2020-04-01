@@ -23,6 +23,8 @@ public class PaginaInicial {
 	@FindBy(how = How.ID, using = "speakersImg")
 	private WebElement clicarBanner;
 
+	@FindBy(how = How.ID, using = "playstation2")
+	private WebElement clicarBannerInexistente;
 
 	public void clicarMenuUsuario() {
 
@@ -45,7 +47,12 @@ public class PaginaInicial {
 
 		clicarBanner.click();
 	}
-
+	
+	
+	public void clicarImgBannerInexistente() {
+		
+		clicarBannerInexistente.click();
+	}
 	
 	public PaginaInicial(WebDriver driver) {
 
